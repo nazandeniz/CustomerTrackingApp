@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnSave = new Button();
             lblName = new Label();
             lblPhone = new Label();
@@ -36,11 +37,15 @@
             txtPhone = new TextBox();
             txtMail = new TextBox();
             lstCustomers = new ListBox();
+            toolTip1 = new ToolTip(components);
+            lblWarning = new Label();
+            btnUpdate = new Button();
+            btnDelete = new Button();
             SuspendLayout();
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(493, 138);
+            btnSave.Location = new Point(51, 300);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(94, 29);
             btnSave.TabIndex = 0;
@@ -88,6 +93,8 @@
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(125, 27);
             txtPhone.TabIndex = 2;
+            txtPhone.TextChanged += txtPhone_TextChanged;
+            txtPhone.KeyPress += txtPhone_KeyPress;
             // 
             // txtMail
             // 
@@ -99,16 +106,54 @@
             // lstCustomers
             // 
             lstCustomers.FormattingEnabled = true;
-            lstCustomers.Location = new Point(467, 279);
+            lstCustomers.Location = new Point(489, 53);
             lstCustomers.Name = "lstCustomers";
-            lstCustomers.Size = new Size(150, 104);
+            lstCustomers.Size = new Size(150, 304);
             lstCustomers.TabIndex = 3;
+            lstCustomers.SelectedIndexChanged += lstCustomers_SelectedIndexChanged;
+            // 
+            // toolTip1
+            // 
+            toolTip1.Popup += toolTip1_Popup;
+            // 
+            // lblWarning
+            // 
+            lblWarning.AutoSize = true;
+            lblWarning.Location = new Point(233, 161);
+            lblWarning.Name = "lblWarning";
+            lblWarning.Size = new Size(198, 40);
+            lblWarning.TabIndex = 4;
+            lblWarning.Text = "\"Please enter numbers only!\"\n\n";
+            lblWarning.Visible = false;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(151, 301);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 28);
+            btnUpdate.TabIndex = 5;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(251, 301);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 6;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
+            Controls.Add(lblWarning);
             Controls.Add(lstCustomers);
             Controls.Add(txtMail);
             Controls.Add(txtPhone);
@@ -118,7 +163,8 @@
             Controls.Add(lblName);
             Controls.Add(btnSave);
             Name = "Form1";
-            Text = "n";
+            Text = "customerTracking";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -133,5 +179,9 @@
         private TextBox txtPhone;
         private TextBox txtMail;
         private ListBox lstCustomers;
+        private ToolTip toolTip1;
+        private Label lblWarning;
+        private Button btnUpdate;
+        private Button btnDelete;
     }
 }
