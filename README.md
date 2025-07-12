@@ -26,12 +26,9 @@ A lightweight and efficient Windows Forms application developed in C# for managi
 - 🔍 **Regex** for input validation
 
 ---
+ 🖼️ Screenshot
 
-## 🖼️ Screenshots
-
-> 📸 *You can add screenshots here if you want!*  
-E.g.:
-```bash
+![Customer Tracking App Screenshot](customerTrackingSS.png)
 
 🛠️ How to Run
 Clone or download this repository
