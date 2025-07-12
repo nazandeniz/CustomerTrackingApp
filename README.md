@@ -32,4 +32,45 @@ A lightweight and efficient Windows Forms application developed in C# for managi
 > 📸 *You can add screenshots here if you want!*  
 E.g.:
 ```bash
-Ekran görüntüsü 2025-07-12 092906.png
+
+🛠️ How to Run
+Clone or download this repository
+
+Open the solution file CustomerTrackingApp.sln in Visual Studio
+
+Build and run the application
+
+You’re ready to go!
+
+✨ Future Improvements (Ideas)
+Switch to SQLite or SQL Server for real DB support
+
+Add login system for user-based customer tracking
+
+Replace ListView with DataGridView for better control
+
+Implement unit testing for validation logic
+
+Dark mode theme option
+
+👩‍💻 Developed by
+Nazan Deniz
+Istanbul-based aspiring software developer with passion for clean UI and robust logic.
+
+
+
+📬 Contact
+💬 [LinkedIn Profile : (I'll update here :) )]
+📧 [Mail: 1nazandeniz@gmail.com ]
+📦 Project GitHub URL: github.com/YourUserName/CustomerTrackingApp
+
+
+
+
+
+
+
+
+
+
+
